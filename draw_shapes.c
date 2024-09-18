@@ -1,6 +1,32 @@
 #include <stdio.h>
 #include "draw.h"
 
+void print_arrow(int leftCol, int size){
+  int rightCol = leftCol + size;
+  int row, col;
+  
+  // Print the triangle head
+  for (row = 0; row < size; row++) {
+    for (col = leftCol; col <= rightCol; col++) {
+      if (col < leftCol + size - row || col > rightCol - row){
+	putchar(' ');
+      }
+      else{
+	putchar('*');
+      }
+    }
+    putchar('\n');
+  }
+  // Print the vertical line
+  for (row = 0; row < size; row++) {
+    for (col = leftCol; col < rightCol; col++){
+      putchar(' ');
+    }
+    putchar('*');
+    putchar('\n');
+  }
+}
+
 /* Prints a size x size square whose left col is at startCol */
 void print_square(int leftCol, int size)
 {
