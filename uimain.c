@@ -20,7 +20,7 @@ int main()
       puts("You selected arrow:");
       // print_arrow(5,5);
       print_triangle(5,7);
-      print_square(7,9);
+      print_square(8,8);
       break;
     case 't':
       puts("You selected triangle:");
